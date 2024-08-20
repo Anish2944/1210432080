@@ -1,17 +1,11 @@
 const ProductDetailsPage = ({ match }) => {
-    const [product, setProduct] = useState(null);
+    const [product, setProducts] = useState(null);
   
     useEffect(() => {
-      const fetchProductDetails = async () => {
-        try {
-          const response = await axios.get(`http://localhost:5000/api/categories/product/${match.params.id}`);
-          setProduct(response.data);
-        } catch (error) {
-          console.error('Error fetching product details:', error);
-        }
-      };
-  
-      fetchProductDetails();
+      fetch('/products.json')
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error('Error fetching products:', error));
     }, [match.params.id]);
   
     if (!product) return <div>Loading...</div>;
@@ -24,8 +18,6 @@ const ProductDetailsPage = ({ match }) => {
         <p>Price: ${product.price}</p>
         <p>Rating: {product.rating}</p>
         <p>Discount: {product.discount}%</p>
-        <p>Availability: {product.availability ? 'In Stock' : 'Out of Stock'}</p>
-        {/* Add more detailed info and style appropriately */}
       </div>
     );
   };
