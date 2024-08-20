@@ -1,7 +1,6 @@
 const ProductCard = ({ product }) => {
     return (
       <div className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <img src={product.imageUrl} alt={product.productName} className="w-full h-48 object-cover rounded-t-lg" />
         <div className="mt-4">
           <h2 className="text-lg font-bold">{product.productName}</h2>
           <p className="text-gray-600">Company: {product.company}</p>

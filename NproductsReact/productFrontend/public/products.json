@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "productName": "Laptop 1",
+      "company": "AMZ",
+      "category": "Laptop",
+      "price": 1000,
+      "rating": 4.5,
+      "discount": 10,
+      "availability": "In Stock",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "productName": "Laptop 2",
+      "company": "AMZ",
+      "category": "Laptop",
+      "price": 1200,
+      "rating": 4.7,
+      "discount": 15,
+      "availability": "In Stock",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  
